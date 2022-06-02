@@ -1,0 +1,88 @@
+.reviews {
+  width: 100%;
+  padding: 150px 0 116px;
+  box-sizing: border-box;
+}
+
+.reviews__container {
+  width: 100%;
+  margin-left: 362px;
+}
+
+.reviews__title-container {
+  width: 100%;
+  max-width: 718px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.reviews__title {
+  font-family: 'Neue Machina';
+  font-size: 40px;
+  line-height: 1;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  color: #242424;
+  margin: 0 0 40px;
+}
+
+.reviews__pagination {
+  width: 250px;
+  height: 50px;
+}
+
+.reviews__pagination-points {
+  display: flex;
+  gap: 16px;
+}
+
+.reviews__pagination-point {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+  border: 1px solid #242424;
+}
+
+.reviews__pagination-point_current {
+  width: 7px;
+  height: 7px;
+  background-color: #242424;
+}
+
+.reviews__slides {
+  max-width: 1078px;
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews__slide {
+  width: 100%;
+  max-width: 718px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  padding: 55px 89px 72px 88px;
+}
+
+.reviews__slide_next {
+  position: absolute;
+  top: 0;
+  right: calc(-33% - 30px);
+  opacity: 0.4;
+}
+
+.reviews__logo {
+  height: 40px;
+  margin-bottom: 47px;
+}
+
+.reviews__text {
+  font-family: 'Formular';
+  font-size: 20px;
+  line-height: 1.4;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  color: #242424;
+  margin: 0 0 32px;
+}
