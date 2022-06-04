@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import reviewsData from "../../data/reviews";
+import PaginationDots from "../PaginationDots/PaginationDots";
 import SwitchButton from "../SwitchButton/SwitchButton";
 import ReviewCard from "../ReviewCard/ReviewCard";
 import "./Reviews.css";
@@ -8,15 +9,7 @@ const Reviews = () => {
   const [data] = useState(reviewsData);
   const [state, setState] = useState(false);
 
-  useEffect(() => {
-    if (data) {
-      setState((old) => ({ ...old, current: data[0].id }));
-
-      if (data.length > 1) {
-        setState((old) => ({ ...old, next: data[1].id }));
-      }
-    }
-  }, [data]);
+  const getData = (id) => data.filter((item) => item.id === id)[0];
 
   const prevButtonClickHandler = () => {
     if (state.prev !== "") {
@@ -48,7 +41,15 @@ const Reviews = () => {
     }
   };
 
-  const getData = (id) => data.filter((item) => item.id === id)[0];
+  useEffect(() => {
+    if (data && data.length > 0) {
+      setState((old) => ({ ...old, current: data[0].id }));
+
+      if (data.length > 1) {
+        setState((old) => ({ ...old, next: data[1].id }));
+      }
+    }
+  }, [data]);
 
   const prevCard = state.prev !== "" ? getData(state.prev) : false;
   const currentCard = state.current !== "" ? getData(state.current) : false;
@@ -60,12 +61,18 @@ const Reviews = () => {
         <div className="reviews__title-container">
           <h2 className="reviews__title">Рецензии</h2>
           <div className="reviews__pagination">
-            <div className="reviews__pagination-points">
+            {data && data.length > 0 && (
+              <PaginationDots
+                data={data.map((item) => item.id)}
+                current={state.current}
+              />
+            )}
+            {/* <div className="reviews__pagination-points">
               <div className="reviews__pagination-point reviews__pagination-point_current"></div>
               <div className="reviews__pagination-point"></div>
               <div className="reviews__pagination-point"></div>
               <div className="reviews__pagination-point"></div>
-            </div>
+            </div> */}
             <div className="reviews__pagination-buttons">
               <SwitchButton
                 dest="prev"
