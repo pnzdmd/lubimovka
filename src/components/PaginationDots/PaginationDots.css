@@ -26,3 +26,13 @@
 .reviews__pagination-dot_current:hover {
   cursor: default;
 }
+
+@media (max-width: 480px) {
+  .reviews__pagination-dots {
+    position: absolute;
+    top: 104px;
+    left: 26px;
+    margin-right: 0;
+    z-index: 10;
+  }
+}

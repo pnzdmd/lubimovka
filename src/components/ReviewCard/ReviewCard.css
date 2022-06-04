@@ -9,7 +9,7 @@
 .reviews__slide_next {
   position: absolute;
   top: 0;
-  right: calc(-33% - 30px);
+  left: 748px;
   opacity: 0.4;
 }
 
@@ -29,17 +29,15 @@
   margin: 0 0 32px;
 }
 
-@media (max-width: 480px) {
-  .reviews__slide {
-    width: 100%;
-    max-width: 718px;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    padding: 77px 27px 72px 26px;
-  }
-
+@media (max-width: 1280px) {
   .reviews__slide_next {
     display: none;
+  }
+}
+
+@media (max-width: 718px) {
+  .reviews__slide {
+    padding: 77px 27px 72px 26px;
   }
 
   .reviews__logo {
