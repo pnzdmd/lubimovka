@@ -1,10 +1,11 @@
+@import url(../../vendor/fonts/fonts.css);
 .page {
-  margin: 0 auto;
-  padding: 0;
-  max-width: 1440px;
-  font-family: 'Formular', 'Neue Machina', Arial, Helvetica, sans-serif;
-  background-color: #ecebe8;
-  color: #242424;
-  font-style: normal;
-  font-weight: normal;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1440px;
+    font-family: 'Formular', 'Neue Machina', Arial, Helvetica, sans-serif;
+    background-color: #ecebe8;
+    color: #242424;
+    font-style: normal;
+    font-weight: normal;
 }

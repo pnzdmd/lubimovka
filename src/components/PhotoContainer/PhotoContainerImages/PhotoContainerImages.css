@@ -1,0 +1,9 @@
+.photo-container__img {
+    width: 100%;
+}
+
+@media screen and (max-width: 415px) {
+    .photo-container__img {
+        height: 141.7px;
+    }
+}

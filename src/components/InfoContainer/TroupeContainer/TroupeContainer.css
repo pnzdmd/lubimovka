@@ -1,0 +1,5 @@
+.troupe-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 184px;
+}
