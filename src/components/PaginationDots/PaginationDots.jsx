@@ -1,9 +1,8 @@
 import "./PaginationDots.css";
 
 const PaginationDots = (props) => {
-  console.log(props);
 
-  const { data, current } = props;
+  const { data, current, clickHandler } = props;
 
   return (
     <>
@@ -11,9 +10,9 @@ const PaginationDots = (props) => {
         <div className="reviews__pagination-dots">
           {data.map((item) => {
             return item === current ? (
-              <div className="reviews__pagination-dot reviews__pagination-dot_current"></div>
+              <div className="reviews__pagination-dot reviews__pagination-dot_current" key={item}></div>
             ) : (
-              <div className="reviews__pagination-dot"></div>
+              <div className="reviews__pagination-dot" id={item} onClick={(evt) => clickHandler(evt)} key={item}></div>
             );
           })}
         </div>

@@ -14,31 +14,47 @@ const Reviews = () => {
   const prevButtonClickHandler = () => {
     if (state.prev !== "") {
       const prevCardPositon = data.findIndex((item) => item.id === state.prev);
-      const isAnotherPrevCard = Boolean(data[prevCardPositon - 1]);
+      const anotherPrevCard = Boolean(data[prevCardPositon - 1]) ? data[prevCardPositon - 1].id : "";
 
-      const newState = {
-        prev: isAnotherPrevCard ? data[prevCardPositon - 1].id : "",
+      setState({
+        prev: anotherPrevCard,
         current: state.prev,
         next: state.current,
-      };
-
-      setState(newState);
+      });
     }
   };
 
   const nextButtonClickHandler = () => {
     if (state.next !== "") {
       const nextCardPositon = data.findIndex((item) => item.id === state.next);
-      const isAnotherNextCard = Boolean(data[nextCardPositon + 1]);
+      const anotherNextCard = Boolean(data[nextCardPositon + 1]) ? data[nextCardPositon + 1].id : "";
 
-      const newState = {
+      setState({
         prev: state.current,
         current: state.next,
-        next: isAnotherNextCard ? data[nextCardPositon + 1].id : "",
-      };
-
-      setState(newState);
+        next: anotherNextCard,
+      });
     }
+  };
+
+  const dotClickHandler = (evt) => {
+    const selectedCardId = evt.target.id;
+    const selectedCardPositon = data.findIndex(
+      (item) => item.id === selectedCardId
+    );
+
+    const prevCardId = Boolean(data[selectedCardPositon - 1])
+      ? data[selectedCardPositon - 1].id
+      : "";
+    const nextCardId = Boolean(data[selectedCardPositon + 1])
+      ? data[selectedCardPositon + 1].id
+      : "";
+
+    setState({
+      prev: prevCardId,
+      current: selectedCardId,
+      next: nextCardId,
+    });
   };
 
   useEffect(() => {
@@ -65,14 +81,9 @@ const Reviews = () => {
               <PaginationDots
                 data={data.map((item) => item.id)}
                 current={state.current}
+                clickHandler={dotClickHandler}
               />
             )}
-            {/* <div className="reviews__pagination-points">
-              <div className="reviews__pagination-point reviews__pagination-point_current"></div>
-              <div className="reviews__pagination-point"></div>
-              <div className="reviews__pagination-point"></div>
-              <div className="reviews__pagination-point"></div>
-            </div> */}
             <div className="reviews__pagination-buttons">
               <SwitchButton
                 dest="prev"

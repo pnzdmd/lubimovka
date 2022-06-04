@@ -13,8 +13,16 @@
   border: 1px solid #242424;
 }
 
+.reviews__pagination-dot:hover {
+  cursor: pointer;
+}
+
 .reviews__pagination-dot_current {
   width: 7px;
   height: 7px;
   background-color: #242424;
+}
+
+.reviews__pagination-dot_current:hover {
+  cursor: default;
 }
