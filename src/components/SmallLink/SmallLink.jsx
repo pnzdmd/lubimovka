@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import "./SmallLink.css";
 
 const SmallLink = (props) => {
@@ -8,6 +9,11 @@ const SmallLink = (props) => {
       {children}
     </a>
   );
+};
+
+SmallLink.propTypes = {
+  children: PropTypes.string.isRequired,
+  url: PropTypes.string
 };
 
 export default SmallLink;

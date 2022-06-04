@@ -14,7 +14,9 @@ const Reviews = () => {
   const prevButtonClickHandler = () => {
     if (state.prev !== "") {
       const prevCardPositon = data.findIndex((item) => item.id === state.prev);
-      const anotherPrevCard = Boolean(data[prevCardPositon - 1]) ? data[prevCardPositon - 1].id : "";
+      const anotherPrevCard = Boolean(data[prevCardPositon - 1])
+        ? data[prevCardPositon - 1].id
+        : "";
 
       setState({
         prev: anotherPrevCard,
@@ -27,7 +29,9 @@ const Reviews = () => {
   const nextButtonClickHandler = () => {
     if (state.next !== "") {
       const nextCardPositon = data.findIndex((item) => item.id === state.next);
-      const anotherNextCard = Boolean(data[nextCardPositon + 1]) ? data[nextCardPositon + 1].id : "";
+      const anotherNextCard = Boolean(data[nextCardPositon + 1])
+        ? data[nextCardPositon + 1].id
+        : "";
 
       setState({
         prev: state.current,
@@ -58,13 +62,14 @@ const Reviews = () => {
   };
 
   useEffect(() => {
-    if (data && data.length > 0) {
-      setState((old) => ({ ...old, current: data[0].id }));
+    const currentCard = data && data.length > 0 ? data[0].id : "";
+    const nextCard = data && data.length > 1 ? data[1].id : "";
 
-      if (data.length > 1) {
-        setState((old) => ({ ...old, next: data[1].id }));
-      }
-    }
+    setState({
+      prev: "",
+      current: currentCard,
+      next: nextCard,
+    });
   }, [data]);
 
   const prevCard = state.prev !== "" ? getData(state.prev) : false;
@@ -99,8 +104,12 @@ const Reviews = () => {
           </div>
         </div>
         <div className="reviews__slides">
-          {state && state?.current && <ReviewCard data={currentCard} current />}
-          {state && state?.next && <ReviewCard data={nextCard} />}
+          {state && state?.current && currentCard && (
+            <ReviewCard data={currentCard} current />
+          )}
+          {state && state?.next && nextCard && (
+            <ReviewCard data={nextCard} />
+          )}
         </div>
       </div>
     </section>

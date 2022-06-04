@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import "./PaginationDots.css";
 
 const PaginationDots = (props) => {
@@ -19,6 +20,12 @@ const PaginationDots = (props) => {
       )}
     </>
   );
+};
+
+PaginationDots.propTypes = {
+  data: PropTypes.array,
+  current: PropTypes.string,
+  clickHandler: PropTypes.func 
 };
 
 export default PaginationDots;

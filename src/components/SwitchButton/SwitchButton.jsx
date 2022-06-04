@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import "./SwitchButton.css";
 
 const SwitchButton = (props) => {
@@ -19,6 +20,12 @@ const SwitchButton = (props) => {
       disabled={isDisabled}
     ></button>
   );
+};
+
+SwitchButton.propTypes = {
+  dest: PropTypes.string,
+  isDisabled: PropTypes.bool,
+  onClick: PropTypes.func
 };
 
 export default SwitchButton;
