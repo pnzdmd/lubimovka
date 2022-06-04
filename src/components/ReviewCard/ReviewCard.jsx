@@ -1,8 +1,7 @@
 import './ReviewCard.css';
 
 const ReviewCard = (props) => {
-  console.log(props);
-  const { logo, text,link } = props.data;
+  const { logo, text, link } = props.data;
 
   const cardStyle = props.current 
     ? 'reviews__slide reviews__slide_current'

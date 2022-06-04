@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import reviewsData from "../../data/reviews";
+import SwitchButton from "../SwitchButton/SwitchButton";
 import ReviewCard from "../ReviewCard/ReviewCard";
 import "./Reviews.css";
 
@@ -10,30 +11,20 @@ const Reviews = () => {
   useEffect(() => {
     if (data) {
       setState((old) => ({ ...old, current: data[0].id }));
-    }
 
-    if (data && data.length > 1) {
-      setState((old) => ({ ...old, next: data[1].id }));
+      if (data.length > 1) {
+        setState((old) => ({ ...old, next: data[1].id }));
+      }
     }
   }, [data]);
 
   const prevButtonClickHandler = () => {
-
-    const prevCardPositon = data.findIndex(item => item.id === state.prev);
-
-    if(data[prevCardPositon - 1]) {
-
-      const newState = {
-        prev: data[prevCardPositon - 1].id,
-        current: state.prev,
-        next: state.current,
-      };
-
-      setState(newState);
-    } else if(state.prev !== '') {
+    if (state.prev !== "") {
+      const prevCardPositon = data.findIndex((item) => item.id === state.prev);
+      const isAnotherPrevCard = Boolean(data[prevCardPositon - 1]);
 
       const newState = {
-        prev: '',
+        prev: isAnotherPrevCard ? data[prevCardPositon - 1].id : "",
         current: state.prev,
         next: state.current,
       };
@@ -43,24 +34,14 @@ const Reviews = () => {
   };
 
   const nextButtonClickHandler = () => {
-
-    const nextCardPositon = data.findIndex(item => item.id === state.next);
-
-    if(data[nextCardPositon + 1]) {
-
-      const newState = {
-        prev: state.current,
-        current: state.next,
-        next: data[nextCardPositon + 1].id,
-      };
-
-      setState(newState);
-    } else if (state.next !== '') {
+    if (state.next !== "") {
+      const nextCardPositon = data.findIndex((item) => item.id === state.next);
+      const isAnotherNextCard = Boolean(data[nextCardPositon + 1]);
 
       const newState = {
         prev: state.current,
         current: state.next,
-        next: '',
+        next: isAnotherNextCard ? data[nextCardPositon + 1].id : "",
       };
 
       setState(newState);
@@ -69,8 +50,9 @@ const Reviews = () => {
 
   const getData = (id) => data.filter((item) => item.id === id)[0];
 
-  const currentCard = getData(state.current);
-  const nextCard = getData(state.next);
+  const prevCard = state.prev !== "" ? getData(state.prev) : false;
+  const currentCard = state.current !== "" ? getData(state.current) : false;
+  const nextCard = state.next !== "" ? getData(state.next) : false;
 
   return (
     <section className="reviews">
@@ -85,16 +67,16 @@ const Reviews = () => {
               <div className="reviews__pagination-point"></div>
             </div>
             <div className="reviews__pagination-buttons">
-              <button
-                type="button"
-                className="reviews__pagination-button reviews__pagination-button_prev"
+              <SwitchButton
+                dest="prev"
+                isDisabled={prevCard ? false : true}
                 onClick={prevButtonClickHandler}
-              ></button>
-              <button
-                type="button"
-                className="reviews__pagination-button reviews__pagination-button_next"
+              />
+              <SwitchButton
+                dest="next"
+                isDisabled={nextCard ? false : true}
                 onClick={nextButtonClickHandler}
-              ></button>
+              />
             </div>
           </div>
         </div>
