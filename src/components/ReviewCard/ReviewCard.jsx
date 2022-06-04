@@ -4,13 +4,14 @@ import "./ReviewCard.css";
 
 const ReviewCard = (props) => {
   const { logo, text, link } = props.data;
+  const { onClick } = props;
 
   const cardStyle = props.current
     ? "reviews__slide reviews__slide_current"
     : "reviews__slide reviews__slide_next";
 
   return (
-    <div className={cardStyle}>
+    <div className={cardStyle} onClick={onClick}>
       <img className="reviews__logo" src={logo} alt="" />
       <p className="reviews__text">{text}</p>
       {link && link.length > 0 && (
@@ -24,6 +25,7 @@ ReviewCard.propTypes = {
   logo: PropTypes.any.isRequired,
   text: PropTypes.string.isRequired,
   link: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default ReviewCard;

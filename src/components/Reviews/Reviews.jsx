@@ -108,7 +108,7 @@ const Reviews = () => {
             <ReviewCard data={currentCard} current />
           )}
           {state && state?.next && nextCard && (
-            <ReviewCard data={nextCard} />
+            <ReviewCard data={nextCard} onClick={nextButtonClickHandler} />
           )}
         </div>
       </div>
