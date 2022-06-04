@@ -1,9 +1,76 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reviewsData from "../../data/reviews";
+import ReviewCard from "../ReviewCard/ReviewCard";
 import "./Reviews.css";
 
 const Reviews = () => {
-  const [state] = useState(reviewsData);
+  const [data] = useState(reviewsData);
+  const [state, setState] = useState(false);
+
+  useEffect(() => {
+    if (data) {
+      setState((old) => ({ ...old, current: data[0].id }));
+    }
+
+    if (data && data.length > 1) {
+      setState((old) => ({ ...old, next: data[1].id }));
+    }
+  }, [data]);
+
+  const prevButtonClickHandler = () => {
+
+    const prevCardPositon = data.findIndex(item => item.id === state.prev);
+
+    if(data[prevCardPositon - 1]) {
+
+      const newState = {
+        prev: data[prevCardPositon - 1].id,
+        current: state.prev,
+        next: state.current,
+      };
+
+      setState(newState);
+    } else if(state.prev !== '') {
+
+      const newState = {
+        prev: '',
+        current: state.prev,
+        next: state.current,
+      };
+
+      setState(newState);
+    }
+  };
+
+  const nextButtonClickHandler = () => {
+
+    const nextCardPositon = data.findIndex(item => item.id === state.next);
+
+    if(data[nextCardPositon + 1]) {
+
+      const newState = {
+        prev: state.current,
+        current: state.next,
+        next: data[nextCardPositon + 1].id,
+      };
+
+      setState(newState);
+    } else if (state.next !== '') {
+
+      const newState = {
+        prev: state.current,
+        current: state.next,
+        next: '',
+      };
+
+      setState(newState);
+    }
+  };
+
+  const getData = (id) => data.filter((item) => item.id === id)[0];
+
+  const currentCard = getData(state.current);
+  const nextCard = getData(state.next);
 
   return (
     <section className="reviews">
@@ -17,23 +84,23 @@ const Reviews = () => {
               <div className="reviews__pagination-point"></div>
               <div className="reviews__pagination-point"></div>
             </div>
+            <div className="reviews__pagination-buttons">
+              <button
+                type="button"
+                className="reviews__pagination-button reviews__pagination-button_prev"
+                onClick={prevButtonClickHandler}
+              ></button>
+              <button
+                type="button"
+                className="reviews__pagination-button reviews__pagination-button_next"
+                onClick={nextButtonClickHandler}
+              ></button>
+            </div>
           </div>
         </div>
         <div className="reviews__slides">
-          <div className="reviews__slide reviews__slide_current">
-            <img className="reviews__logo" src={state[0].logo} alt="" />
-            <p className="reviews__text">{state[0].text}</p>
-            <a className="reviews__link" href="/">
-              Читать полностью
-            </a>
-          </div>
-          <div className="reviews__slide reviews__slide_next">
-            <img className="reviews__logo" src={state[1].logo} alt="" />
-            <p className="reviews__text">{state[1].text}</p>
-            <a className="reviews__link" href="/">
-              Читать полностью
-            </a>
-          </div>
+          {state && state?.current && <ReviewCard data={currentCard} current />}
+          {state && state?.next && <ReviewCard data={nextCard} />}
         </div>
       </div>
     </section>
