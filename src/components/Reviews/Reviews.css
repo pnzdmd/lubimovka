@@ -43,8 +43,11 @@
 
 .reviews__slides {
   max-width: 1078px;
-  position: relative;
   overflow: hidden;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 30px;
+  align-items: start;
 }
 
 @media (max-width: 1280px) {
