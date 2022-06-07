@@ -1,10 +1,12 @@
 import "./Footer.css"
-import logo from '../../images/Logo.svg'
-import partner1 from '../../images/partner-logo1.png'
-import partner2 from '../../images/partner-logo2.png'
-import partner3 from '../../images/partner-logo3.png'
-import partner4 from '../../images/partner-logo4.png'
-import studioLogo from '../../images/smallLogo.svg'
+import Partners from "../Partners/Partners"
+
+import logo from '../../assets/images/footer/Logo.svg'
+import partner1 from '../../assets/images/footer/partner-logo1.png'
+import partner2 from '../../assets/images/footer/partner-logo2.png'
+import partner3 from '../../assets/images/footer/partner-logo3.png'
+import partner4 from '../../assets/images/footer/partner-logo4.png'
+import studioLogo from '../../assets/images/footer/smallLogo.svg'
 
 
 const Footer = () => {
@@ -19,22 +21,12 @@ const Footer = () => {
       <article className="footer__partners">
         <p className="footer__partners-text">Генеральные партнеры</p>
         <ul className="list footer__partners-list">
-          <li className="list-item">
-            <a href="#" className="footer__partner-link">
-              <img src={partner1} className="footer__partner-img" alt="Логотип фонда Михаила Прохорова" />
-            </a></li>
-          <li className="list-item">
-            <a href="#" className="footer__partner-link">
-              <img src={partner4} className="footer__partner-img" alt="Логотип mosbrew" />
-            </a></li>
-          <li className="list-item">
-            <a href="#" className="footer__partner-link">
-              <img src={partner3} className="footer__partner-img" alt="Логотип SBTG" />
-            </a></li>
-          <li className="list-item">
-            <a href="#" className="footer__partner-link">
-              <img src={partner2} className="footer__partner-img" alt="Логотип 'А поговорить'" />
-            </a></li>
+
+          <Partners link="#" img={partner1} alt="Логотип фонда Михаила Прохорова" />
+          <Partners link="#" img={partner4} alt="Логотип mosbrew" />
+          <Partners link="#" img={partner3} alt="Логотип SBTG" />
+          <Partners link="#" img={partner2} alt="Логотип 'А поговорить'" />
+
         </ul>
       </article>
 

@@ -22,6 +22,7 @@
 .footer {
   margin: 0 auto;
   padding: 50px 83px 42px 209px;
+  position: relative;
 }
 
 .footer__logo-link {
