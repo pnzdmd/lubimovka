@@ -1,0 +1,7 @@
+.photoContainer {
+  max-width: 1440px;
+  padding-bottom: 150px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}

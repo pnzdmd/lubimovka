@@ -1,0 +1,27 @@
+.sectionTitle {
+  max-width: 350px;
+  margin: 0 0 45px 362px;
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+  color: #242424;
+}
+
+@media screen and (max-width: 1070px) {
+  .sectionTitle {
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sectionTitle {
+    margin: 0 30px 26px 28px;
+    text-align: left;
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
