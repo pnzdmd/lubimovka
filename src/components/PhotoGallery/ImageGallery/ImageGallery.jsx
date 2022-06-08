@@ -6,7 +6,7 @@ export function ImageGallery({ imagesArr }) {
     return null;
   }
 
-  const images = imagesArr.map((image) => {
+  const images = imagesArr.map((image, i) => {
     const { imageSrc, imageTitle } = image;
     if (!imageSrc && typeof image === 'string') {
       return <Image src={image} />;
@@ -15,6 +15,7 @@ export function ImageGallery({ imagesArr }) {
       <Image
         src={imageSrc}
         title={imageTitle}
+        key={i}
       />
     );
   });

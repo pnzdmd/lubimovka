@@ -8,8 +8,13 @@ export function Description({
   descriptionParagraphs,
   article,
 }) {
-  const description = descriptionParagraphs.map((paragraph) => (
-    <p className={styles.textParagraph}>{paragraph}</p>
+  const description = descriptionParagraphs.map((paragraph, i) => (
+    <p
+      className={styles.textParagraph}
+      key={i}
+    >
+      {paragraph}
+    </p>
   ));
   return (
     <div className={styles.descriptionWrapper}>
