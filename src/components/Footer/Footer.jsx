@@ -14,17 +14,17 @@ const Footer = () => {
   return (
     <section className="footer">
 
-      <a href="#" className="footer__logo-link">
+      <a href="#" className="footer__logo-link link">
         <img src={logo} alt="Логотип фестиваля" />
       </a>
 
       <article className="footer__partners">
-        <p className="footer__partners-text">Генеральные партнеры</p>
+        <h2 className="footer__partners-header">Генеральные партнеры</h2>
         <ul className="list footer__partners-list">
 
-          <Partners link="#" img={partner1} alt="Логотип фонда Михаила Прохорова" />
+          <Partners link="#" img={partner1} alt="Логотип фонда Михаила Прохорова" text="Генеральный партнёр" />
           <Partners link="#" img={partner4} alt="Логотип mosbrew" />
-          <Partners link="#" img={partner3} alt="Логотип SBTG" />
+          <Partners link="#" img={partner3} alt="Логотип SBTG" text="Онлайн-трансляции" />
           <Partners link="#" img={partner2} alt="Логотип 'А поговорить'" />
 
         </ul>
@@ -110,7 +110,7 @@ const Footer = () => {
 
         <div className="footer___website-info-wrapper">
           <img src={studioLogo} className="footer___studio_logo" alt="логотип студии" />
-          <p className="footer___text">дизайн сайта — <a className="link" href="#">shishki.collective</a> </p>
+          <p className="footer___text">дизайн сайта — <br /> <a className="link" href="#">shishki.collective</a> </p>
           <p className="footer___text">вёрстка и разработка&nbsp;— студенты Яндекс.Практикума</p>
         </div>
 
