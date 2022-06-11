@@ -1,7 +1,7 @@
 import styles from './App.module.css';
 import { PhotoGallery } from '../PhotoGallery/PhotoGallery';
 import { ShowInfo } from '../ShowInfo';
-import { showData } from './data';
+import { showData } from '../../assets/data';
 
 function App() {
   return (

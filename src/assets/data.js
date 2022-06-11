@@ -1,11 +1,11 @@
-import PHOTO1_SRC from '../../assets/images/PhotoGallery/two_actors.jpg';
-import PHOTO2_SRC from '../../assets/images/PhotoGallery/black_and_white_actress.jpg';
-import PHOTO3_SRC from '../../assets/images/PhotoGallery/male_actor.jpg';
-import PHOTO4_SRC from '../../assets/images/PhotoGallery/musicians.jpg';
-import PHOTO5_SRC from '../../assets/images/PhotoGallery/auditorium.jpg';
-import PHOTO6_SRC from '../../assets/images/PhotoGallery/actress_with_long_hair.jpg';
-import PHOTO7_SRC from '../../assets/images/PhotoGallery/singer.jpg';
-import PHOTO8_SRC from '../../assets/images/PhotoGallery/actress.jpg';
+import PHOTO1_SRC from './images/PhotoGallery/two_actors.jpg';
+import PHOTO2_SRC from './images/PhotoGallery/black_and_white_actress.jpg';
+import PHOTO3_SRC from './images/PhotoGallery/male_actor.jpg';
+import PHOTO4_SRC from './images/PhotoGallery/musicians.jpg';
+import PHOTO5_SRC from './images/PhotoGallery/auditorium.jpg';
+import PHOTO6_SRC from './images/PhotoGallery/actress_with_long_hair.jpg';
+import PHOTO7_SRC from './images/PhotoGallery/singer.jpg';
+import PHOTO8_SRC from './images/PhotoGallery/actress.jpg';
 
 export const showData = {
   showName: 'С_училища',

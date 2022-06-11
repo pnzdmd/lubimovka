@@ -6,16 +6,20 @@ export function ImageGallery({ imagesArr }) {
     return null;
   }
 
-  const images = imagesArr.map((image, i) => {
+  const images = imagesArr.map((image) => {
     const { imageSrc, imageTitle } = image;
-    if (!imageSrc && typeof image === 'string') {
-      return <Image src={image} />;
+    if (
+      (!imageSrc || typeof imageSrc !== 'string') &&
+      (!image || typeof image !== 'string')
+    ) {
+      return null;
     }
+    const src = typeof imageSrc === 'string' ? imageSrc : image;
     return (
       <Image
-        src={imageSrc}
+        src={src}
         title={imageTitle}
-        key={i}
+        key={src}
       />
     );
   });

@@ -8,10 +8,10 @@ export function Description({
   descriptionParagraphs,
   article,
 }) {
-  const description = descriptionParagraphs.map((paragraph, i) => (
+  const description = descriptionParagraphs.map((paragraph) => (
     <p
       className={styles.textParagraph}
-      key={i}
+      key={paragraph.substring(0, 30)}
     >
       {paragraph}
     </p>
