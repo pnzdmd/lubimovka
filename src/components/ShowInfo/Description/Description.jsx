@@ -24,15 +24,15 @@ export function Description({
         width="560"
         height="315"
         src={videoIframeSrc}
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+        allowFullScreen
       />
       <div className={styles.description}>{description}</div>
       <h6 className={styles.linksTitle}>{article.linksTitle}</h6>
       <div className={styles.linksContainer}>
-        <h7 className={styles.title}>{showName}</h7>
-        <h7 className={styles.titleMinWidth}>{article.titleMinWidth}</h7>
+        <h6 className={styles.title}>{showName}</h6>
+        <h6 className={styles.titleMinWidth}>{article.titleMinWidth}</h6>
         <a
           className={styles.link}
           href="#some-id"
@@ -57,8 +57,8 @@ export function Description({
         </a>
       </div>
       <div className={styles.article}>
-        <h7 className={styles.author}>{article.author}</h7>
-        <h7 className={styles.authorMinWidth}>{article.authorMinWidth}</h7>
+        <h6 className={styles.author}>{article.author}</h6>
+        <h6 className={styles.authorMinWidth}>{article.authorMinWidth}</h6>
         <p className={styles.city}>{article.city}</p>
         <p className={styles.year}>{article.year}</p>
       </div>

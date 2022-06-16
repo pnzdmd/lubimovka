@@ -6,14 +6,14 @@ import { ShowInfo } from '../ShowInfo';
 import { showData } from '../../assets/data';
 
 function App() {
-  return ( 
-  <div className="page">
-    <Header />
-    <Play />
-    <ShowInfo showData={showData} />
-    <PhotoGallery gallery={showData.photoGallery} />
-   </div>
-  )
+  return (
+    <div className="page">
+      <Header />
+      <Play />
+      <ShowInfo showData={showData} />
+      <PhotoGallery gallery={showData.photoGallery} />
+    </div>
+  );
 }
 
 export default App;
