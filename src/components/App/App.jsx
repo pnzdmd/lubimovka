@@ -5,6 +5,8 @@ import { ShowInfo } from '../ShowInfo';
 import { showData } from '../../assets/data';
 import Footer from '../Footer/Footer.jsx'
 
+import './App.css';
+
 function App() {
   return ( 
     <div className="page">
