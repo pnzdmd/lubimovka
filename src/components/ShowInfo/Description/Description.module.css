@@ -1,0 +1,256 @@
+.descriptionWrapper {
+  flex-grow: 1;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 1080px) {
+  .descriptionWrapper {
+    flex-grow: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .descriptionWrapper {
+    margin: 24px 24px 0 24px;
+  }
+}
+
+.videoTrailer {
+  width: 100%;
+  height: 389px;
+  margin-bottom: 62px;
+}
+
+@media screen and (max-width: 500px) {
+  .videoTrailer {
+    width: 365px;
+    height: 205px;
+    margin-bottom: 32px;
+  }
+}
+
+.description {
+  margin-left: 4px;
+}
+
+.description p:first-child {
+  text-indent: 0;
+}
+
+.description p:nth-child(2) {
+  margin-bottom: 28px;
+}
+
+.description p:last-child {
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 500px) {
+  .description p:last-child {
+    margin-bottom: 97px;
+  }
+}
+
+.textParagraph {
+  max-width: 602px;
+  font-family: 'Formular';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'ss01' on;
+  text-indent: 58px;
+  color: #242424;
+  margin: 0 0 16px 0;
+}
+
+@media screen and (max-width: 650px) {
+  .textParagraph {
+    max-width: 365px;
+  }
+}
+
+.linksTitle {
+  display: none;
+  align-self: flex-start;
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  color: #242424;
+  margin: 0 0 32px 26px;
+}
+
+@media screen and (max-width: 500px) {
+  .linksTitle {
+    display: inline-block;
+  }
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
+  background-color: #b7c09d;
+  margin-bottom: 15px;
+  margin-left: 4px;
+}
+
+@media screen and (max-width: 500px) {
+  .linksContainer {
+    max-width: 240px;
+    margin-bottom: 22px;
+  }
+}
+
+.title {
+  display: inline-block;
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #242424;
+  padding: 22px 31px 142px 24px;
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    display: none;
+  }
+}
+
+.titleMinWidth {
+  width: 182px;
+  display: none;
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #242424;
+  padding: 16px 46px 120px 16px;
+}
+
+@media screen and (max-width: 500px) {
+  .titleMinWidth {
+    display: inline-block;
+  }
+}
+
+.link {
+  text-decoration: none;
+  font-family: 'Formular';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: #242424;
+  border-top: 1px #242424 solid;
+  padding: 10px 0 18px 16px;
+  box-sizing: border-box;
+}
+
+.link:hover {
+  background-color: #242424;
+  color: #ffff;
+}
+
+.link:hover .leftArrow {
+  filter: invert(100%);
+}
+
+.link:hover .downArrow {
+  filter: invert(100%);
+}
+
+.leftArrow {
+  margin-top: 6px;
+  margin-left: 42px;
+}
+
+@media screen and (max-width: 500px) {
+  .leftArrow {
+    margin-left: 44px;
+  }
+}
+
+.downArrow {
+  margin-left: 58px;
+}
+
+@media screen and (max-width: 500px) {
+  .downArrow {
+    margin-left: 60px;
+  }
+}
+
+.article {
+  max-width: 140px;
+}
+
+@media screen and (max-width: 500px) {
+  .article {
+    max-width: 243px;
+    width: 100%;
+  }
+}
+
+.author {
+  display: inline-block;
+  margin-bottom: 6px;
+  margin-left: 4px;
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #242424;
+}
+
+@media screen and (max-width: 500px) {
+  .author {
+    display: none;
+  }
+}
+
+.authorMinWidth {
+  display: none;
+  margin-bottom: 10px;
+  margin-left: 4px;
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #242424;
+}
+
+@media screen and (max-width: 500px) {
+  .authorMinWidth {
+    display: inline-block;
+  }
+}
+
+.city,
+.year {
+  margin: 0;
+  margin-left: 4px;
+  font-family: 'Formular';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: #242424;
+}
