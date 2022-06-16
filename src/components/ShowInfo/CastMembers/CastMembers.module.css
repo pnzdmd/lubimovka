@@ -1,0 +1,14 @@
+.castMembersList {
+  padding: 0;
+  margin: 22px 0 0 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+}
+
+@media screen and (max-width: 500px) {
+  .castMembersList {
+    margin-top: 24px;
+  }
+}
