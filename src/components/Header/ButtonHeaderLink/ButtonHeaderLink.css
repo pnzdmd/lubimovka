@@ -1,22 +1,8 @@
 .header__button-link {
-  margin: 21px 16px 22px 0;
+  width: 100%;
+  margin:0;
   padding: 0;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.12;
-  text-transform: lowercase;
-  color: #242424;
   border: none;
   background-color: rgba(0, 0, 0, 0);
-  transition: opacity .3s ease;
   cursor: pointer;
-}
-.header__button-link:first-child {
-  margin-left: 24px;
-}
-.header__button-link:last-child {
-  margin-right: 24px;
-}
-.header__button-link:hover {
-  opacity: .6;
 }

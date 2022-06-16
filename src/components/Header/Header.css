@@ -24,12 +24,51 @@ opacity: .6;
   font-family: 'Formular';
   font-style: normal;
 }
+.header__link-menu-button {
+  margin: 20px 44px 19px 0;
+  padding: 0;
+  max-height: 22px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.38;
+  color: #242424;
+  transition: opacity .3s ease;
+}
+.header__link-menu-button:nth-child(7) {
+  min-width: 99px;
+}
+.header__link-menu-button:last-child {
+  margin-right: 29px;
+}
+.header__link-menu-button:hover {
+  opacity: .6;
+}
 .header__links {
   min-width: 257px;
-  margin: 0;
+  margin: 21px 0 0;
   padding: 0;
   border-left: 1px solid #242424;
   border-right: 1px solid #242424;
+  display: flex;
+}
+.header__link-around-button {
+  margin: 0 16px 22px 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: lowercase;
+  color: #242424;
+  transition: opacity .3s ease;
+}
+.header__link-around-button:first-child {
+  margin-left: 24px;
+}
+.header__link-around-button:last-child {
+  margin-right: 24px;
+}
+.header__link-around-button:hover {
+  opacity: .6;
 }
 .header__button-plus {
   margin: 18px 0 18px 17px;
