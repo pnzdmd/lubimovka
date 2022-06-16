@@ -1,0 +1,34 @@
+@media (max-width: 800px) {
+  .footer__partner-list-item {
+    width: 50%;
+    margin-bottom: 40px;
+  }
+}
+
+.footer__partner-img {
+  max-width: 97px;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .footer__partner-img {
+    margin: 0 auto;
+    display: block;
+    max-width: 107px;
+  }
+}
+
+.footer__partner-text {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .footer__partner-text {
+    display: block;
+    margin: 12px 0 0 0;
+    text-align: center;
+    font-family: 'Formular';
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
