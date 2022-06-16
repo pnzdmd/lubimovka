@@ -1,0 +1,38 @@
+.reviews__pagination-dots {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;
+  margin-right: 30px;
+}
+
+.reviews__pagination-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+  border: 1px solid #242424;
+}
+
+.reviews__pagination-dot:hover {
+  cursor: pointer;
+}
+
+.reviews__pagination-dot_current {
+  width: 7px;
+  height: 7px;
+  background-color: #242424;
+}
+
+.reviews__pagination-dot_current:hover {
+  cursor: default;
+}
+
+@media (max-width: 480px) {
+  .reviews__pagination-dots {
+    position: absolute;
+    top: 104px;
+    left: 26px;
+    margin-right: 0;
+    z-index: 10;
+  }
+}

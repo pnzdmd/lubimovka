@@ -3,6 +3,7 @@ import Play from '../Play/Play.js';
 import { PhotoGallery } from '../PhotoGallery/PhotoGallery';
 import { ShowInfo } from '../ShowInfo';
 import { showData } from '../../assets/data';
+import Reviews from "../Reviews/Reviews";
 import Footer from '../Footer/Footer.jsx'
 
 import './App.css';
@@ -14,6 +15,7 @@ function App() {
       <Play />
       <ShowInfo showData={showData} />
       <PhotoGallery gallery={showData.photoGallery} />
+      <Reviews />
       <Footer />
     </div>
   )

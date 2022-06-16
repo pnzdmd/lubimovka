@@ -1,0 +1,34 @@
+.reviews__pagination-button {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+}
+
+.reviews__pagination-button:hover {
+  cursor: pointer;
+}
+
+.reviews__pagination-button:active {
+  transform: scale(110%);
+}
+
+.reviews__pagination-button_dest_prev {
+  background-image: url(../../images/slider-arrow-left.svg);
+}
+
+.reviews__pagination-button_dest_next {
+  background-image: url(../../images/slider-arrow-right.svg);
+}
+
+.reviews__pagination-button_disabled {
+  opacity: 0.4;
+}
+
+.reviews__pagination-button_disabled:hover {
+  cursor: default;
+}
+
+.reviews__pagination-button_disabled:active {
+  transform: unset;
+}

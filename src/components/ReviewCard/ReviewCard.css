@@ -1,0 +1,43 @@
+.reviews__slide {
+  width: 718px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 55px 89px 72px 88px;
+}
+
+.reviews__slide_next {
+  opacity: 0.4;
+}
+
+.reviews__logo {
+  height: 40px;
+  margin-bottom: 47px;
+}
+
+.reviews__text {
+  font-family: "Formular";
+  font-size: 20px;
+  line-height: 1.4;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: #242424;
+  margin: 0 0 32px;
+}
+
+@media (max-width: 1280px) {
+  .reviews__slide_next {
+    display: none;
+  }
+}
+
+@media (max-width: 718px) {
+  .reviews__slide {
+    padding: 77px 27px 72px 26px;
+    width: 100%;
+  }
+
+  .reviews__logo {
+    margin-bottom: 35px;
+  }
+}
