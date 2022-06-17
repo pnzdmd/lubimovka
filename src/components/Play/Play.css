@@ -1,0 +1,19 @@
+.play {
+  max-width: 1440px;
+  margin: 0;
+  padding: 33px 0 0 30px;
+  display: flex;
+  color: #242424;
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 414px) {
+  .play {
+    max-width: 414px;
+    margin: 54px 0 0;
+    padding: 0;
+    flex-direction: column;
+  }
+}

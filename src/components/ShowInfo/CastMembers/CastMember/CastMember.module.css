@@ -1,0 +1,33 @@
+.castMemberItem {
+  font-family: 'Formular';
+  font-style: normal;
+  font-weight: 300;
+  color: #242424;
+}
+
+@media screen and (max-width: 500px) {
+  .castMemberItem {
+    width: 100%;
+  }
+}
+
+.role {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.name {
+  margin: 0 0 24px 28px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'ss01' on;
+}
+
+@media screen and (max-width: 500px) {
+  .name {
+    margin-left: 30px;
+    margin-bottom: 24px;
+  }
+}

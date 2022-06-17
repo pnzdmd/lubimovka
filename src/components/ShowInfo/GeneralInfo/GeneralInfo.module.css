@@ -1,0 +1,9 @@
+.generalInfo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3px;
+}
+
+.separatorImage {
+  margin: 0 16px 0 16px;
+}
